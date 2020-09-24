@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Temperature{
+        constructor(degree) {
+            this.degree=degree;
+            if (degree> -273){
+                this.getDegree= function (){
+                    return degree;
+            }
+                this.convertToF = function (){
+                    return degree * 1.8 + 32;
+                }
+                this.convertToK= function (){
+                    return degree +273;
+                }
+
+            } else {
+                alert('Low degree.')
+            }
+        }
+    }
+    let temperature=new Temperature(-200)
+    let degree=temperature.getDegree();
+    let F=temperature.convertToF();
+    let K=temperature.convertToK();
+    alert('Degree= '+ degree+','+'F= '+ F+','+'K= ' +K);
+</script>
